@@ -27,7 +27,16 @@ enum JO {
     case JO17
     case JO18
     case JO19
-    
+    case JO20
+    case JO21
+    case JO22
+    case JO23
+    case JO24
+    case JO25
+    case JO26
+    case JO27
+    case JO28
+
     var stationNameKanji: String {
         switch self {
         case .JO01: return "久里浜"
@@ -49,6 +58,15 @@ enum JO {
         case .JO17: return "品川"
         case .JO18: return "新橋"
         case .JO19: return "東京"
+        case .JO20: return "新日本橋"
+        case .JO21: return "馬喰町"
+        case .JO22: return "錦糸町"
+        case .JO23: return "新小岩"
+        case .JO24: return "市川"
+        case .JO25: return "船橋"
+        case .JO26: return "津田沼"
+        case .JO27: return "稲毛"
+        case .JO28: return "千葉"
         }
     }
     
@@ -73,6 +91,15 @@ enum JO {
         case .JO17: return "shinagawa"
         case .JO18: return "shimbashi"
         case .JO19: return "tokyo"
+        case .JO20: return "shin-nihombashi"
+        case .JO21: return "bakurocho"
+        case .JO22: return "kinshicho"
+        case .JO23: return "shin-koiwa"
+        case .JO24: return "ichikawa"
+        case .JO25: return "funabashi"
+        case .JO26: return "tsudanuma"
+        case .JO27: return "inage"
+        case .JO28: return "chiba"
         }
     }
 }
