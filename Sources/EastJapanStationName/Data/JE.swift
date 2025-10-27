@@ -42,6 +42,24 @@ enum JE: CaseIterable {
         case .JE16: "いなげかいがん"; case .JE17: "ちばみなと"; case .JE18: "そが";
         }
     }
+    ///
+    /// 他路線接続数
+    ///
+    var howManyOtherLineisConnected: Int {
+        return switch self {
+        case .JE10: 1 // JM
+        default: 0
+        }
+    }
+    ///
+    /// 他路線接続数
+    ///
+    var nameOfOtherLineisConnected: [String] {
+        return switch self {
+        case .JE10: ["武蔵野線"]
+        default: []
+        }
+    }
     
     case JE01; case JE02; case JE03; case JE04; case JE05;
     case JE06; case JE07; case JE08; case JE09; case JE10;

@@ -24,12 +24,12 @@ enum JM: CaseIterable {
     ///
     var kanjiText: String {
         return switch self {
-        case .JE10: "西船橋";
-        case .JE11: "船橋法典";case .JE12: "市川大野"; case .JE13: "東松戸"; case .JE14: "新八柱"; case .JE15: "新松戸";
-        case .JE16: "南流山"; case .JE17: "三郷"; case .JE18: "新三郷"; case .JE19: "吉川美南"; case .JE20: "吉川";
-        case .JE21: "越谷レイクタウン"; case .JE22: "南越谷"; case .JE23: "東川口"; case .JE24: "東浦和"; case .JE25: "南浦和";
-        case .JE26: "武蔵浦和"; case .JE27: "西浦和"; case .JE28: "北朝霞"; case .JE29: "新座"; case .JE30: "東所沢";
-        case .JE31: "新秋津"; case .JE32: "新小平"; case .JE33: "西国分寺"; case .JE34: "北府中"; case .JE35: "府中本町";
+        case .JM10: "西船橋";
+        case .JM11: "船橋法典";case .JM12: "市川大野"; case .JM13: "東松戸"; case .JM14: "新八柱"; case .JM15: "新松戸";
+        case .JM16: "南流山"; case .JM17: "三郷"; case .JM18: "新三郷"; case .JM19: "吉川美南"; case .JM20: "吉川";
+        case .JM21: "越谷レイクタウン"; case .JM22: "南越谷"; case .JM23: "東川口"; case .JM24: "東浦和"; case .JM25: "南浦和";
+        case .JM26: "武蔵浦和"; case .JM27: "西浦和"; case .JM28: "北朝霞"; case .JM29: "新座"; case .JM30: "東所沢";
+        case .JM31: "新秋津"; case .JM32: "新小平"; case .JM33: "西国分寺"; case .JM34: "北府中"; case .JM35: "府中本町";
         }
     }
     
@@ -38,19 +38,38 @@ enum JM: CaseIterable {
     ///
     var hiraganaText: String {
         return switch self {
-        case .JE10: "にしふなばし";
-        case .JE11: "ふなばしほうてん"; case .JE12: "いちかわおおの"; case .JE13: "ひがしまつど"; case .JE14: "しんやはしら";case .JE15: "しんまつど";
-        case .JE16: "みなみながれやま"; case .JE17: "みさと"; case .JE18: "しんみさと"; case .JE19: "よしかわみなみ"; case .JE20: "よしかわ";
-        case .JE21: "こしがやれいくたうん"; case .JE22: "みなみこしがや"; case .JE23: "ひがしかわぐち"; case .JE24: "ひがしうらわ"; case .JE25: "みなみうらわ";
-        case .JE26: "むさしうらわ"; case .JE27: "にしうらわ"; case .JE28: "きたあさか"; case .JE29: "にいざ"; case .JE30: "ひがしところざわ";
-        case .JE31: "しんあきつ"; case .JE32: "しんこだいら"; case .JE33: "にしこくぶんじ"; case .JE34: "きたふちゅう"; case .JE35: "ふちゅうほんまち";
+        case .JM10: "にしふなばし";
+        case .JM11: "ふなばしほうてん"; case .JM12: "いちかわおおの"; case .JM13: "ひがしまつど"; case .JM14: "しんやはしら";case .JM15: "しんまつど";
+        case .JM16: "みなみながれやま"; case .JM17: "みさと"; case .JM18: "しんみさと"; case .JM19: "よしかわみなみ"; case .JM20: "よしかわ";
+        case .JM21: "こしがやれいくたうん"; case .JM22: "みなみこしがや"; case .JM23: "ひがしかわぐち"; case .JM24: "ひがしうらわ"; case .JM25: "みなみうらわ";
+        case .JM26: "むさしうらわ"; case .JM27: "にしうらわ"; case .JM28: "きたあさか"; case .JM29: "にいざ"; case .JM30: "ひがしところざわ";
+        case .JM31: "しんあきつ"; case .JM32: "しんこだいら"; case .JM33: "にしこくぶんじ"; case .JM34: "きたふちゅう"; case .JM35: "ふちゅうほんまち";
+        }
+    }
+    ///
+    /// 他路線接続数
+    ///
+    var howManyOtherLineisConnected: Int {
+        return switch self {
+        case .JM10: 1 // JE
+        default: 0
+        }
+    }
+    ///
+    /// 他路線接続数
+    ///
+    var nameOfOtherLineisConnected: [String] {
+        return switch self {
+        case .JM10: ["京葉線"]
+        default: []
         }
     }
     
-    case JE10;
-    case JE11; case JE12; case JE13; case JE14; case JE15;
-    case JE16; case JE17; case JE18; case JE19; case JE20;
-    case JE21; case JE22; case JE23; case JE24; case JE25;
-    case JE26; case JE27; case JE28; case JE29; case JE30;
-    case JE31; case JE32; case JE33; case JE34; case JE35;
+    
+    case JM10;
+    case JM11; case JM12; case JM13; case JM14; case JM15;
+    case JM16; case JM17; case JM18; case JM19; case JM20;
+    case JM21; case JM22; case JM23; case JM24; case JM25;
+    case JM26; case JM27; case JM28; case JM29; case JM30;
+    case JM31; case JM32; case JM33; case JM34; case JM35;
 }
