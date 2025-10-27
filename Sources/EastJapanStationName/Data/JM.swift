@@ -60,7 +60,7 @@ enum JM: CaseIterable {
     ///
     var nameOfOtherLineisConnected: [String] {
         return switch self {
-        case .JM10: ["京葉線"]
+        case .JM10: ["JR京葉線"]
         default: []
         }
     }

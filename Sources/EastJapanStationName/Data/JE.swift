@@ -48,6 +48,7 @@ enum JE: CaseIterable {
     var howManyOtherLineisConnected: Int {
         return switch self {
         case .JE10: 1 // JM
+        case .JE18: 2
         default: 0
         }
     }
@@ -56,7 +57,8 @@ enum JE: CaseIterable {
     ///
     var nameOfOtherLineisConnected: [String] {
         return switch self {
-        case .JE10: ["武蔵野線"]
+        case .JE10: ["JR武蔵野線"]
+        case .JE18: ["JR外房線", "JR内房線"]
         default: []
         }
     }
